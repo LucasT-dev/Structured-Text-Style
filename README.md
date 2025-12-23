@@ -1,6 +1,6 @@
 # Sublime Structured Text Syntax Highlighting
 
-**[Idea created from the repository](https://github.com/mszubart/IEC_ST.sublimePackage)**
+**[Idea created from this repository](https://github.com/mszubart/IEC_ST.sublimePackage)**
 
 This repository contains the files needed to add **Structured Text (ST)** syntax highlighting to **Sublime Text**. Structured Text is a programming language used in industrial programmable logic controllers (PLCs) according to the IEC 61131-3 standard.
 
