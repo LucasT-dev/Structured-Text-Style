@@ -21,7 +21,7 @@ This repository contains the files needed to add **Structured Text (ST)** syntax
 ## Installation
 
 1. **Clone the repository** or download the files.
-2. Copy the `.tmLanguage`, `.tmTheme` (or `.sublime-color-scheme`), and `.sublime-settings` files to the `Packages/User` folder in Sublime Text.
+2. Copy the `.tmLanguage`, `.sublime-color-scheme` and `.sublime-settings` files to the `Packages/User` folder in Sublime Text.
    - To access this folder, go to `Preferences > Browse Packages...`.
 
 3. **Restart Sublime Text**.
