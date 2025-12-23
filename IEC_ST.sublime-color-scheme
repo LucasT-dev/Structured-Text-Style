@@ -1,0 +1,94 @@
+{
+    "name": "IEC ST",
+    "globals":
+    {
+        "background": "#282C34",
+        "foreground": "#FFFFFF",
+        "caret": "#FFFFFF",
+        "line_highlight": "#3E4451",
+        "selection": "#80CDFF",
+        "invisibles": "#5C6370"
+    },
+    "rules":
+    [
+        {
+            "name": "Mots-clés de contrôle",
+            "scope": "keyword.control.IEC_ST",
+            "foreground": "#3333FF"
+        },
+        {
+            "name": "Types de données",
+            "scope": "storage.datatype.IEC_ST",
+            "foreground": "#3399FF"
+        },
+        {
+            "name": "Constantes numériques",
+            "scope": "constant.numeric.IEC_ST",
+            "foreground": "#D19A66"
+        },
+        {
+            "name": "Chaînes de caractères",
+            "scope": "string.quoted.single.IEC_ST",
+            "foreground": "#98C379"
+        },
+        {
+            "name": "Commentaires",
+            "scope": "comment.block.IEC_ST",
+            "foreground": "#00B512",
+            "font_style": "italic"
+        },
+        {
+            "name": "Commentaires",
+            "scope": "comment.line.double-slash.IEC_ST",
+            "foreground": "#00B512",
+            "font_style": "italic"
+        },
+        {
+            "name": "Texte entre apostrophes",
+            "scope": "string.quoted.single.IEC_ST",
+            "foreground": "#FF33FF"
+        },
+        {
+            "name": "Texte entre guillemet",
+            "scope": "wstring.quoted.single.IEC_ST",
+            "foreground": "#FF33FF"
+        },
+        {
+            "name": "Adresses de variables",
+            "scope": "constant.other.address.IEC_ST",
+            "foreground": "#999900"
+        },
+        // Durée
+        {
+            "name": "Durée",
+            "scope": "constant.other.time.IEC_ST",
+            "foreground": "#C678DD"
+        },
+        // Date
+        {
+            "name": "Date",
+            "scope": "constant.other.date.IEC_ST",
+            "foreground": "#C678DD"
+        },
+        // Temps
+        {
+            "name": "Temps",
+            "scope": "constant.other.time-of-day.IEC_ST",
+            "foreground": "#C678DD"
+        },
+        // Date et temps
+        {
+            "name": "Date et temps",
+            "scope": "constant.other.date-time.IEC_ST",
+            "foreground": "#C678DD"
+        },
+        {
+            "name": "Opérateurs",
+            "scope": "keyword.operator.IEC_ST",
+            "foreground": "#569CD6"
+        }
+
+
+        
+    ]
+}
