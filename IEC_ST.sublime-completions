@@ -1,0 +1,508 @@
+{
+    "scope": "source.IEC_ST",
+
+    "completions":
+    [
+        {
+            "trigger": "IF...THEN...END_IF",
+            "contents": "IF ${1:condition} THEN\n\t${0:// code}\nEND_IF"
+        },
+        {
+            "trigger": "IF...THEN...ELSE...END_IF",
+            "contents": "IF ${1:condition} THEN\n\t${2:// code if true}\nELSE\n\t${3:// code if false}\nEND_IF"
+        },
+        {
+            "trigger": "IF...THEN...ELSIF...ELSE...END_IF",
+            "contents": "IF ${1:condition1} THEN\n\t${2:// code if condition1 true}\nELSIF ${3:condition2} THEN\n\t${4:// code if condition2 true}\nELSE\n\t${5:// code if false}\nEND_IF"
+        },
+        {
+            "trigger": "FOR...TO...BY...DO...END_FOR",
+            "contents": "FOR ${1:counter} := ${2:start} TO ${3:end} BY ${4:step} DO\n\t${5:// code}\nEND_FOR"
+        },
+        {
+            "trigger": "WHILE...DO...END_WHILE",
+            "contents": "WHILE ${1:condition} DO\n\t${0:// code}\nEND_WHILE"
+        },
+        {
+            "trigger": "REPEAT...UNTIL...END_REPEAT",
+            "contents": "REPEAT\n\t${1:// code}\nUNTIL ${2:condition}\nEND_REPEAT"
+        },
+        {
+            "trigger": "CASE...OF...ELSE...END_CASE",
+            "contents": "CASE ${1:expression} OF\n\t${2:value1}:\n\t\t${3:// code for value1}\n\t${4:value2}:\n\t\t${5:// code for value2}\n\tELSE\n\t\t${6:// default code}\nEND_CASE"
+        },
+        {
+            "trigger": "PROGRAM",
+            "contents": "PROGRAM\n\t${1:// code}"
+        },
+        {
+            "trigger": "TYPE...END_TYPE",
+            "contents": "TYPE\n\t${1:// code}\nEND_TYPE"
+        },
+        {
+            "trigger": "VAR...END_VAR",
+            "contents": "VAR\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_INPUT...END_VAR",
+            "contents": "VAR_INPUT\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_OUTPUT...END_VAR",
+            "contents": "VAR_OUTPUT\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_IN_OUT...END_VAR",
+            "contents": "VAR_IN_OUT\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_TEMP...END_VAR",
+            "contents": "VAR_TEMP\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_EXTERNAL...END_VAR",
+            "contents": "VAR_EXTERNAL\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_ACCESS...END_VAR",
+            "contents": "VAR_ACCESS\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_CONFIG...END_VAR",
+            "contents": "VAR_CONFIG\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "VAR_GLOBAL...END_VAR",
+            "contents": "VAR_GLOBAL\n\t${1:// code}\nEND_VAR"
+        },
+        {
+            "trigger": "CONFIGURATION...END_CONFIGURATION",
+            "contents": "CONFIGURATION\n\t${1:// code}\nEND_CONFIGURATION"
+        },
+
+        {
+            "trigger": "STRUCT...END_STRUCT",
+            "contents": "STRUCT\n\t${1:name} : ${2:datatype} := ${3:value};\nEND_STRUCT"
+        },
+
+        {
+            "trigger": "TRUE",
+            "contents": "TRUE"
+        },
+        {
+            "trigger": "FALSE",
+            "contents": "FALSE"
+        },
+        {
+            "trigger": "ARRAY...OF",
+            "contents": "ARRAY[0..${1:to}] OF ${2:datatype}"
+        },
+        {
+            "trigger": "BOOL",
+            "contents": "BOOL"
+        },
+        {
+            "trigger": "BYTE",
+            "contents": "BYTE"
+        },
+        {
+            "trigger": "WORD",
+            "contents": "WORD"
+        },
+        {
+            "trigger": "DWORD",
+            "contents": "DWORD"
+        },
+        {
+            "trigger": "LWORD",
+            "contents": "LWORD"
+        },
+        {
+            "trigger": "INT",
+            "contents": "INT"
+        },
+        {
+            "trigger": "DINT",
+            "contents": "DINT"
+        },
+        {
+            "trigger": "SINT",
+            "contents": "SINT"
+        },
+        {
+            "trigger": "UINT",
+            "contents": "UINT"
+        },
+        {
+            "trigger": "LINT",
+            "contents": "LINT"
+        },
+        {
+            "trigger": "USINT",
+            "contents": "USINT"
+        },
+        {
+            "trigger": "UDINT",
+            "contents": "UDINT"
+        },
+        {
+            "trigger": "ULINT",
+            "contents": "ULINT"
+        },
+        {
+            "trigger": "REAL",
+            "contents": "REAL"
+        },
+        {
+            "trigger": "LREAL",
+            "contents": "LREAL"
+        },
+        {
+            "trigger": "TIME",
+            "contents": "TIME"
+        },
+        {
+            "trigger": "LTIME",
+            "contents": "LTIME"
+        },
+        {
+            "trigger": "DATE",
+            "contents": "DATE"
+        },
+        {
+            "trigger": "LDATE",
+            "contents": "LDATE"
+        },
+        {
+            "trigger": "TIME_OF_DAY",
+            "contents": "TIME_OF_DAY"
+        },
+        {
+            "trigger": "TOD",
+            "contents": "TOD"
+        },
+        {
+            "trigger": "DATE_AND_TIME",
+            "contents": "DATE_AND_TIME"
+        },
+        {
+            "trigger": "DT",
+            "contents": "DT"
+        },
+        {
+            "trigger": "LDATE_AND_TIME",
+            "contents": "LDATE_AND_TIME"
+        },
+        {
+            "trigger": "LDT",
+            "contents": "LDT"
+        },
+        {
+            "trigger": "STRING",
+            "contents": "STRING"
+        },
+        {
+            "trigger": "WSTRING",
+            "contents": "WSTRING"
+        },
+        {
+            "trigger": "CHAR",
+            "contents": "CHAR"
+        },
+        {
+            "trigger": "WCHAR",
+            "contents": "WCHAR"
+        },
+        {
+            "trigger": "DATE_AND_TIME#yyyy-MM-dd-hh:mm:ss",
+            "contents": "DATE_AND_TIME#${1:yyyy}-${2:mm}-${3:dd}-${4:hh}:${5:mm}:${6:ss}"
+        },
+        {
+            "trigger": "DT#yyyy-MM-dd-hh:mm:ss",
+            "contents": "DT#${1:yyyy}-${2:mm}-${3:dd}-${4:hh}:${5:mm}:${6:ss}"
+        },
+        {
+            "trigger": "LDATE_AND_TIME#yyyy-MM-dd-hh:mm:ss",
+            "contents": "LDATE_AND_TIME#${1:yyyy}-${2:mm}-${3:dd}-${4:hh}:${5:mm}:${6:ss}.000000000"
+        },
+        {
+            "trigger": "DATE#yyyy-MM-dd",
+            "contents": "D#${1:yyyy}-${2:mm}-${3:dd}"
+        },
+        {
+            "trigger": "LDATE#yyyy-MM-dd",
+            "contents": "LDATE#${1:yyyy}-${2:mm}-${3:dd}"
+        },
+        {
+            "trigger": "TIME_OF_DAY#hh:mm:ss",
+            "contents": "TOD#${1:hh}:${2:mm}:${3:ss}.000"
+        },
+        {
+            "trigger": "TOD#hh-mm-ss",
+            "contents": "TOD#${1:hh}:${2:mm}:${3:ss}.000"
+        },
+        {
+            "trigger": "TIME#xdxhxmxsxms",
+            "contents": "T#${1:Day}d${2:Hour}h${3:min}m${4:sec}s${5:ms}ms"
+        },
+        {
+            "trigger": "LTIME#xdxhxmxsxmsxusxna",
+            "contents": "LTIME#${1:Day}d${2:Hour}h${3:min}m${4:sec}s${5:ms}ms${6:us}us${7:ns}ns"
+        },
+        {
+            "trigger": "LTIME_OF_DAY#hh-mm-ss",
+            "contents": "LTIME_OF_DAY#${1:hh}:${2:mm}:${3:ss}.000000000"
+        },
+        {
+            "trigger": "ANY",
+            "contents": "ANY"
+        },
+        {
+            "trigger": "ANY_DERIVED",
+            "contents": "ANY_DERIVED"
+        },
+        {
+            "trigger": "ANY_ELEMENTARY",
+            "contents": "ANY_ELEMENTARY"
+        },
+        {
+            "trigger": "ANY_MAGNITUDE",
+            "contents": "ANY_MAGNITUDE"
+        },
+        {
+            "trigger": "ANY_NUM",
+            "contents": "ANY_NUM"
+        },
+        {
+            "trigger": "ANY_REAL",
+            "contents": "ANY_REAL"
+        },
+        {
+            "trigger": "ANY_INT",
+            "contents": "ANY_INT"
+        },
+        {
+            "trigger": "ANY_UNSIGNED",
+            "contents": "ANY_UNSIGNED"
+        },
+        {
+            "trigger": "ANY_SIGNED",
+            "contents": "ANY_SIGNED"
+        },
+        {
+            "trigger": "ANY_DURATION",
+            "contents": "ANY_DURATION"
+        },
+        {
+            "trigger": "ANY_BIT",
+            "contents": "ANY_BIT"
+        },
+        {
+            "trigger": "ANY_CHARS",
+            "contents": "ANY_CHARS"
+        },
+        {
+            "trigger": "ANY_STRING",
+            "contents": "ANY_STRING"
+        },
+        {
+            "trigger": "ANY_CHAR",
+            "contents": "ANY_CHAR"
+        },
+        {
+            "trigger": "ANY_DATE",
+            "contents": "ANY_DATE"
+        },
+        {
+            "trigger": "ADD",
+            "contents": "ADD(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "MUL",
+            "contents": "MUL(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "SUB",
+            "contents": "SUB(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "DIV",
+            "contents": "DIV(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "MOD",
+            "contents": "MOD(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "DIV",
+            "contents": "DIV(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "EXPT",
+            "contents": "EXPT(${1:any_num},${2:any_num})"
+        },
+        {
+            "trigger": "MOVE",
+            "contents": "MOVE(${1:in})"
+        },
+        {
+            "trigger": "SHL",
+            "contents": "SHL(IN:=${1:any_bit}, N:=${any_int})"
+        },
+        {
+            "trigger": "SHR",
+            "contents": "SHR(IN:=${1:any_bit}, N:=${any_int})"
+        },
+        {
+            "trigger": "ROR",
+            "contents": "ROR(IN:=${1:any_bit}, N:=${any_int})"
+        },
+        {
+            "trigger": "ROL",
+            "contents": "ROL(IN:=${1:any_bit}, N:=${any_int})"
+        },
+        {
+            "trigger": "ABS",
+            "contents": "ABS(${1:in})"
+        },
+        {
+            "trigger": "SQRT",
+            "contents": "SQRT(${1:in})"
+        },
+        {
+            "trigger": "LN",
+            "contents": "LN(${1:in})"
+        },
+        {
+            "trigger": "LOG",
+            "contents": "LOG(${1:in})"
+        },
+        {
+            "trigger": "EXP",
+            "contents": "EXP(${1:in})"
+        },
+        {
+            "trigger": "SIN",
+            "contents": "SIN(${1:in})"
+        },
+        {
+            "trigger": "COS",
+            "contents": "COS(${1:in})"
+        },
+        {
+            "trigger": "TAN",
+            "contents": "TAN(${1:in})"
+        },
+        {
+            "trigger": "ASIN",
+            "contents": "ASIN(${1:in})"
+        },
+        {
+            "trigger": "ACOS",
+            "contents": "ACOS(${1:in})"
+        },
+        {
+            "trigger": "ATAN",
+            "contents": "ATAN(${1:in})"
+        },
+        {
+            "trigger": "AND()",
+            "contents": "AND(${1:in1}, ${2:in2})"
+        },
+        {
+            "trigger": "OR()",
+            "contents": "OR(${1:in1}, ${2:in2})"
+        },
+        {
+            "trigger": "XOR()",
+            "contents": "XOR(${1:in1}, ${2:in2})"
+        },
+        {
+            "trigger": "NOT()",
+            "contents": "NOT(${1:in1}, ${2:in2})"
+        },
+        {
+            "trigger": "AND",
+            "contents": "AND"
+        },
+        {
+            "trigger": "OR",
+            "contents": "OR"
+        },
+        {
+            "trigger": "XOR",
+            "contents": "XOR"
+        },
+        {
+            "trigger": "NOT",
+            "contents": "NOT"
+        },
+        {
+            "trigger": "SEL()",
+            "contents": "SEL(G:=${1:bool}, IN0:=${2:any}, IN1:=${3:any})"
+        },
+        {
+            "trigger": "MAX()",
+            "contents": "MAX(${1:any_elementary}, ${2:any_elementary})"
+        },
+        {
+            "trigger": "MIN()",
+            "contents": "MIN(${1:any_elementary}, ${2:any_elementary})"
+        },
+        {
+            "trigger": "LIMIT()",
+            "contents": "LIMIT(MN:=${1:any_elementary}, IN:=${2:any_elementary}, MX:=${3:any_elementary})"
+        },
+        {
+            "trigger": "MUX()",
+            "contents": "MUX(K:=${1:any_int}, ${2:any}, ${3:any})"
+        },
+        {
+            "trigger": "LEN()",
+            "contents": "LEN(${1:any_string})"
+        },
+        {
+            "trigger": "LEFT()",
+            "contents": "LEFT(IN:=${1:any_string}, L:=${2:any_int})"
+        },
+        {
+            "trigger": "RIGHT()",
+            "contents": "RIGHT(IN:=${1:any_string}, L:=${2:any_int})"
+        },
+        {
+            "trigger": "MID()",
+            "contents": "MID(IN:=${1:any_string}, L:=${2:any_int}, P:=${3:any_int})"
+        },
+        {
+            "trigger": "CONCAT()",
+            "contents": "CONCAT(${1:any_string}, ${2:any_string})"
+        },
+        {
+            "trigger": "INSERT()",
+            "contents": "INSERT(IN1:=${1:any_string}, IN2:=${2:any_string}, P:=${3:any_int})"
+        },
+        {
+            "trigger": "DELETE()",
+            "contents": "DELETE(IN:=${1:any_string}, L:=${2:any_int}, P:=${3:any_int})"
+        },
+        {
+            "trigger": "REPLACE()",
+            "contents": "REPLACE(IN1:=${1:any_string}, IN2:=${2:any_string}, L:=${3:any_int}, P:=${4:any_int})"
+        },
+        {
+            "trigger": "FIND()",
+            "contents": "FIND(IN1:=${1:any_string}, IN2:=${2:any_string})"
+        },
+        {
+            "trigger": "SR()",
+            "contents": "SR(S1:=${1:bool}, R:=${2:bool})"
+        },
+        {
+            "trigger": "RS()",
+            "contents": "RS(S:=${1:bool}, R1:=${2:bool})"
+        },
+
+    ]
+}
+
+
