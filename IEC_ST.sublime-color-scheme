@@ -6,24 +6,35 @@
         "foreground": "#FFFFFF",
         "caret": "#FFFFFF",
         "line_highlight": "#3E4451",
-        "selection": "#80CDFF",
+        "selection": "#80CDFF50",
         "invisibles": "#5C6370"
     },
+
     "rules":
     [
         {
             "name": "Mots-clés de contrôle",
             "scope": "keyword.control.IEC_ST",
-            "foreground": "#3333FF"
+            "foreground": "#FF6666"
         },
         {
-            "name": "Types de données",
-            "scope": "storage.datatype.IEC_ST",
+            "name": "Elementary data type",
+            "scope": "storage.datatype.elementary.IEC_ST",
             "foreground": "#3399FF"
         },
         {
-            "name": "Constantes numériques",
+            "name": "Generic data type",
+            "scope": "storage.datatype.generic.IEC_ST",
+            "foreground": "#3399FF"
+        },
+        {
+            "name": "Numeric values",
             "scope": "constant.numeric.IEC_ST",
+            "foreground": "#D19A66"
+        },
+        {
+            "name": "Boolean values",
+            "scope": "constant.boolean.IEC_ST",
             "foreground": "#D19A66"
         },
         {
@@ -54,7 +65,7 @@
             "foreground": "#FF33FF"
         },
         {
-            "name": "Adresses de variables",
+            "name": "Variable adress",
             "scope": "constant.other.address.IEC_ST",
             "foreground": "#999900"
         },
@@ -83,12 +94,49 @@
             "foreground": "#C678DD"
         },
         {
-            "name": "Opérateurs",
+            "name": "Operators",
             "scope": "keyword.operator.IEC_ST",
-            "foreground": "#569CD6"
-        }
-
-
-        
+            "foreground": "#A0A0A0"
+        },
+        {
+            "name": "Conversion fonction",
+            "scope": "function.convertion.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "Arithmetique fonction",
+            "scope": "function.arithmetic.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "Bit shift fonction",
+            "scope": "function.bit.shift.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "Selection fonction",
+            "scope": "function.selection.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "Bitwise fonctions block",
+            "scope": "functions.bitwise.boolean.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "String fonction",
+            "scope": "function.string.character.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "Bistable fonctions block",
+            "scope": "function_block.bistable.IEC_ST",
+            "foreground": "#3DAEE9"
+        },
+        {
+            "name": "Littéraux numériques",
+            "scope": "constant.numeric.literal.IEC_ST",
+            "foreground": "#B8D7A3"
+        },
     ]
 }
