@@ -16,17 +16,88 @@
 
         <dict>
             <key>match</key>
-            <string>\b(?i:(ACTION|END_ACTION|ARRAY|OF|AT|CASE|ELSE|END_CASE|CONFIGURATION|END_CONFIGURATION|CONSTANT|EN|ENO|EXIT|FALSE|F_EDGE|FOR|TO|BY|DO|END_FOR|FUNCTION|END_FUNCTION|FUNCTION_BLOCK|END_FUNCTION_BLOCK|IF|THEN|ELSIF|END_IF|INITIAL_STEP|END_STEP|PROGRAM|WITH|END_PROGRAM|R_EDGE|READ_ONLY|READ_WRITE|REPEAT|UNTIL|END_REPEAT|RESOURCE|ON|END_RESOURCE|RETAIN|NON_RETAIN|RETURN|STEP|END_STEP|STRUCT|END_STRUCT|TASK|TRANSITION|FROM|END_TRANSITION|TRUE|TYPE|END_TYPE|VAR|END_VAR|VAR_INPUT|VAR_OUTPUT|VAR_IN_OUT|VAR_TEMP|VAR_EXTERNAL|VAR_ACCESS|VAR_CONFIG|VAR_GLOBAL|WHILE|END_WHILE))\b</string>
+            <string>\b(?i:(ACTION|END_ACTION|ARRAY|OF|AT|CASE|ELSE|END_CASE|CONFIGURATION|END_CONFIGURATION|CONSTANT|EN|ENO|EXIT|F_EDGE|FOR|TO|BY|DO|END_FOR|FUNCTION|END_FUNCTION|FUNCTION_BLOCK|END_FUNCTION_BLOCK|IF|THEN|ELSIF|END_IF|INITIAL_STEP|END_STEP|PROGRAM|WITH|END_PROGRAM|R_EDGE|READ_ONLY|READ_WRITE|REPEAT|UNTIL|END_REPEAT|RESOURCE|ON|END_RESOURCE|RETAIN|NON_RETAIN|RETURN|STEP|END_STEP|STRUCT|END_STRUCT|TASK|TRANSITION|FROM|END_TRANSITION|TYPE|END_TYPE|VAR|END_VAR|VAR_INPUT|VAR_OUTPUT|VAR_IN_OUT|VAR_TEMP|VAR_EXTERNAL|VAR_ACCESS|VAR_CONFIG|VAR_GLOBAL|WHILE|END_WHILE))\b</string>
             <key>name</key>
             <string>keyword.control.IEC_ST</string>
         </dict>
 
+        <dict>
+            <key>match</key>
+            <string>\b\w+_TO_\w+\b</string>
+            <key>name</key>
+            <string>function.convertion.IEC_ST</string>
+        </dict>
+
+        <!-- Standard arithmetic functions -->
         
         <dict>
             <key>match</key>
-            <string>\b(?i:(BOOL|BYTE|WORD|DWORD|LWORD|SINT|INT|DINT|LINT|USINT|UINT|UDINT|ULINT|REAL|LREAL|TIME|T|DATE|TIME_OF_DAY|TOD|DATE_AND_TIME|DT|STRING|WSTRING))\b</string>
+            <string>\b(?i:(ADD|MUL|SUB|DIV|MOD|EXPT|MOVE))\b</string>
             <key>name</key>
-            <string>storage.datatype.IEC_ST</string>
+            <string>function.arithmetic.IEC_ST</string>
+        </dict>
+
+        <!-- Standard  bit shift functions -->
+        
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(SHL|SHR|ROR|ROL))\b</string>
+            <key>name</key>
+            <string>function.bit.shift.IEC_ST</string>
+        </dict>
+
+        <!--  Standard selection functions -->
+        
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(SEL|MAX|MIN|LIMIT|MUX))\b</string>
+            <key>name</key>
+            <string>function.selection.IEC_ST</string>
+        </dict>
+
+        <!--  Standard character string functions -->
+        
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(LEN|LEFT|RIGHT|MID|CONCAT|INSERT|DELETE|REPLACE|FIND))\b</string>
+            <key>name</key>
+            <string>function.string.character.IEC_ST</string>
+        </dict>
+
+        <!--  Standard bistable function blocks -->
+        
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(SR|RS))\b</string>
+            <key>name</key>
+            <string>function_block.bistable.IEC_ST</string>
+        </dict>
+
+        <!-- Elementary data type -->
+        
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(BOOL|BYTE|WORD|DWORD|LWORD|INT|SINT|DINT|UINT|LINT|USINT|UDINT|ULINT|REAL|LREAL|TIME|T|LTIME|DATE|D|LDATE|TIME_OF_DAY|TOD|DATE_AND_TIME|DT|LDATE_AND_TIME|LDT|STRING|WSTRING|CHAR|WCHAR))\b</string>
+            <key>name</key>
+            <string>storage.datatype.elementary.IEC_ST</string>
+        </dict>
+
+        <!-- Generic data type -->
+        
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(ANY|ANY_DERIVED|ANY_ELEMENTARY|ANY_MAGNITUDE|ANY_NUM|ANY_REAL|ANY_INT|ANY_UNSIGNED|ANY_SIGNED|ANY_DURATION|ANY_BIT|ANY_CHARS|ANY_STRING|ANY_CHAR|ANY_DATE))\b</string>
+            <key>name</key>
+            <string>storage.datatype.generic.IEC_ST</string>
+        </dict>
+
+        <!-- Boolean value (True, False) -->
+
+        <dict>
+            <key>match</key>
+            <string>\b(?i:(TRUE|FALSE))\b</string>
+            <key>name</key>
+            <string>constant.boolean.IEC_ST</string>
         </dict>
 
         
@@ -141,10 +212,10 @@
             <string>constant.other.address.IEC_ST</string>
         </dict>
 
-        <!-- Date et temps (ex: DT#2024-12-06-12:30:15) -->
+        <!-- (L)date and time (ex: DT#2024-12-06-12:30:15) -->
         <dict>
             <key>match</key>
-            <string>\b[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}:[0-9]{2}:[0-9]{2}\b</string>
+            <string>\b[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]{9}+)?\b</string>
             <key>name</key>
             <string>constant.other.date-time.IEC_ST</string>
         </dict>
@@ -152,7 +223,7 @@
         <!-- Durée (ex: T#5s, T#1h30m) -->
         <dict>
             <key>match</key>
-            <string>\b([0-9]+(d|h|m|s|ms)([0-9]+(d|h|m|s|ms))*)\b</string>
+            <string>\b([0-9]+([dDhHmMsS]|[mM][sS]|[uU][sS]|[nN][sS])([0-9]+(d|h|m|s|ms|us|ns))*)\b</string>
             <key>name</key>
             <string>constant.other.time.IEC_ST</string>
         </dict>
@@ -168,15 +239,23 @@
         <!-- Temps (ex: TOD#12:30:15) -->
         <dict>
             <key>match</key>
-            <string>\b[0-9]{2}:[0-9]{2}:[0-9]{2}\b</string>
+            <string>\b([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])(?:\.[0-9]{3}+)?\b</string>
             <key>name</key>
             <string>constant.other.time-of-day.IEC_ST</string>
+        </dict>
+
+        <!--  Numeric literals -->
+        <dict>
+            <key>match</key>
+            <string>\b([0-9]+)#([0-9A-Fa-f_]+)\b</string>
+            <key>name</key>
+            <string>constant.numeric.literal.IEC_ST</string>
         </dict>
 
         <!-- caractere numérique -->
         <dict>
             <key>match</key>
-            <string>\b((((D|d|M|m|Q|q|W|w|I|i|R|r|L|l){1,2}%?[0-9a-fA-F]+)|(0(x|X))[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\b</string>
+            <string>\b((((D|d|M|m|Q|q|W|w|I|i|R|r|L|l){1,2}%?[0-9a-fA-F_]+)|(0(x|X))[0-9a-fA-F_]+)|(([0-9]+(_?[0-9]+)*\.?(_?[0-9]+)*)|(\.[0-9]+(_?[0-9]+)*))((e|E)(\+|-)?[0-9]+(_?[0-9]+)*)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\b</string>
             <key>name</key>
             <string>constant.numeric.IEC_ST</string>
         </dict>
@@ -184,13 +263,18 @@
         <!-- Operator -->
         <dict>
             <key>match</key>
-            <string>\b(EXPT|NOT|MOD|AND|XOR|OR)\b|[-+*/]|==|!=|&lt;=|>=|=|&lt;|&gt;|&lt;&gt;</string>
+            <string>\b|[-+*/]|!=|:=|&lt;=|>=|=|&lt;|&gt;|&lt;&gt;</string>
             <key>name</key>
             <string>keyword.operator.IEC_ST</string>
         </dict>
-        
-    
 
+        <!--  Standard bitwise Boolean functions -->
+        <dict>
+            <key>match</key>
+            <string>\b(NOT|AND|XOR|OR)\b</string>
+            <key>name</key>
+            <string>functions.bitwise.boolean.IEC_ST</string>
+        </dict>
 
     </array>
     <key>scopeName</key>
