@@ -1,4 +1,12 @@
 {
     "color_scheme": "Packages/User/IEC_ST.sublime-color-scheme",
-    "extensions": ["st"]
+    "tab_size": 4,
+    "extensions": ["st"],
+    "auto_indent": true,
+    "smart_indent": true,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": true,
+    "draw_white_space": "any",
+    "rulers": [100, 200],
 }
+
